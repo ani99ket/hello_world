@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script>
+			/%function plot(){
+				for(i=0;i<100;i++){
+				var x=i/10;
+				var fx=x+2;
+				var y=10-fx;
+				var point=document.getElementById("p"+x+"_"+y);
+				point.setAttribute("bgcolor","black");
+				}
+			}%/
+		</script>
+	</head>
+	<body>
+		<button onclick=plot()>Plot</button>
+		<center>
+		<table border=1 cellspacing=0 cellpadding=0 width=50% height=90%>
+			<script>
+			for(i=0;i<10;i++)
+			{
+			
+				document.write("<tr>");
+				
+				for(j=0;j<10;j++)
+				{
+				
+					document.write("<td>");
+					
+					document.write("<table border=1 width=100% height=100% cellspacing=0 cellpadding=0>");
+					for(k=0;k<10;k++)
+					{
+						document.write("<tr>");
+						
+						for(l=0;l<10;l++)
+							document.write("<td id=p"+(j+(l/10))+"_"+(i+(k/10))+"></td>");
+							
+						document.write("</tr>");
+					}
+				
+					document.write("</table>");
+					document.write("</td>");
+				}
+				document.write("</tr>");
+			}
+			</script>
+		</table>
+		
+					
+	</body>
+<html>
